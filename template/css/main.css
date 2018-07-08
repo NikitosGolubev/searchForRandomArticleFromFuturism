@@ -1,0 +1,173 @@
+/*** Main style settings ***/
+
+/* Variables */
+:root {
+	--plain-text-color: #151719;
+	--tools-color: #151719;
+	--background-color: #fffacd;
+
+	--plain-text-font: "Inconsolata";
+
+	--logo-font: 'Knewave';
+
+	--headers-font: 'Acme';
+	--headers-color: #6c92af;
+	--headers-line-height: 1.2;
+
+	--basic-opacity: 0.7;
+	--fast-transition: 0.2s all;
+	--medium-transition: 0.4s all;
+
+	--link-color: #cd00cd;
+	--hover-link-color: #f00;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--background-color);
+	color: var(--plain-text-color);
+	font-family: var(--plain-text-font);
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: var(--headers-line-height);
+	font-family: var(--headers-font);
+	color: var(--headers-color);
+	margin: 5px;
+}
+
+a {
+	color: var(--link-color);
+	transition: var(--fast-transition);
+}
+
+a:hover {
+	color: var(--hover-link-color);
+}
+
+a:active {
+	opacity: var(--basic-opacity);
+}
+
+input {
+	margin: 0;
+	border: none;
+	padding: 15px;
+	font-size: 110%;
+	font-family: var(--plain-text-font);
+	border: 1px solid var(--tools-color);
+}
+
+/*** Main header ***/
+
+.logo {
+	font-family: var(--logo-font);
+	font-size: 300%;
+	text-align: center;
+	padding: 20px 10px;
+	line-height: var(--headers-line-height);
+}
+
+/*** Main ***/
+
+/* Search tools */
+
+.searchWrap {
+	text-align: center;
+	margin: 30px 10px;
+}
+
+.searchForm {
+	margin-top: 20px;
+}
+
+.searchTools {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchField {
+	width: 70%;
+	border-right: none;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background: #fff099;
+}
+
+.searchBtn {
+	font-weight: bold;
+	cursor: pointer;
+	background: #f5e23d;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	transition: var(--medium-transition);
+}
+
+.searchBtn:hover {
+	background: #c9bb1c;
+}
+
+.searchBtn:active {
+	opacity: var(--basic-opacity);
+}
+
+/*** Article ***/
+
+.article {
+	max-width: 800px;
+	margin: auto;
+	padding: 0 10px;
+}
+
+.articleContent {
+	margin-top: 15px;
+}
+
+.article img {
+	max-width: 450px;
+	height: auto;
+}
+figure {width: auto !important;}
+
+.hotHeader {
+	font-size: 240%;
+	line-height: var(--headers-line-height);
+	font-family: var(--headers-font);
+	color: #f44242;
+	text-shadow: 1px 4px 3px rgba(0,0,0,0.4);
+}
+
+.nothingFound {
+	text-align: center;
+}
+
+/*** Prime classes ***/
+
+.danger {
+	color: #8b0000;
+	background: rgba(255, 0, 0, 0.3);
+}
+
+/*** Responsivity ***/
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 80%;
+	}
+
+	.searchWrap {
+		margin: 15px 10px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	body {
+		font-size: 70%;
+	}
+
+	.searchWrap {
+		margin: 15px 10px;
+	}
+}

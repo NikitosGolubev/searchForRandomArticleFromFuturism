@@ -1,0 +1,22 @@
+{
+    "name": "guzzle/learning",
+    "description": "Learning guzzle",
+    "authors": [
+        {
+            "name": "nikita",
+            "email": "nikitka.golubev.1989@mail.ru"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "electrolinux/phpquery": "^0.9.6"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"App\\": "App/"
+    	},
+    	"files": [
+            "helpers.php"
+        ]
+    }
+}
