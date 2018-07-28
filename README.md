@@ -6,7 +6,9 @@ Basicly, everything what it does is just search for articles on site - futurism.
 
 # Front-end
 -)There were no design, so I styled all elements on flow.
+
 -)At the time of creation, I had not learnt NPM, GULP, BEM, SASS yet, so this things aren't applied.
+
 -)Javascript ensures good validation on flow of basic issues that can happen, to make searching more convinient.
 
 # My memories about this work
@@ -20,7 +22,9 @@ Well, this brief work was very important for me at that time. I've been learning
 
 # Front-end
 -)Никакого дизайна изначально не было, все стили придумывались и применялись по ходу работы.
+
 -)В момент создания проекта, я ещё не изучил такие технологии, как: NPM, GULP, БЭМ, SASS, поэтому они не применяются.
+
 -)Javascript обеспечивает валидацию простых ошибок без перезагрузки страницы, что делает поиск удобнее.
 
 # Мои воспоминания об этой работе
