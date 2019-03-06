@@ -12,9 +12,10 @@ use GuzzleHttp\Client;
 	-) Getting result and handling it
 */
 class SearchArticle {
-
+    // Site index page
+    private $indexPageUrl = "https://futurism.com";
 	// The site where search will be performed
-	private $requestURL = "https://futurism.com/";
+	private $requestURL = "https://futurism.com/search";
 	// Min and max length of search string
 	private $minSearchRequestLen = 3;
 	private $maxSearchRequestLen = 256;
@@ -37,7 +38,7 @@ class SearchArticle {
 		// If needed data is sent and its verified
 		if ($this->isDataSent && $this->validateSearchValue($this->searchValue)) {
 			// Getting html of search results
-			$html = $this->getHTMLbyURL($this->requestURL.'?s='.$this->searchValue);
+			$html = $this->getHTMLbyURL($this->requestURL.'?q='.$this->searchValue);
 
 			// If html fetched, so return it
 			if ($html) return $html;
@@ -55,7 +56,7 @@ class SearchArticle {
 		// I use phpQuery library in order to parse html conviniently
 		phpQuery::newDocument($htmlSearchResult);
 			// Getting all links to found posts by selector
-			$linksToArticlesCollection = pq(".post .title");
+			$linksToArticlesCollection = pq(".ResultsRow a");
 			// URLs to found articles will contain there
 			$searchedArticlesURLs = [];
 
@@ -74,8 +75,13 @@ class SearchArticle {
 			$randomArticleURLIndex = random_int(0, (count($searchedArticlesURLs) - 1));
 		phpQuery::unloadDocuments(); // Clear memory
 
-		// Getting URL by random index and returning it
-		return $searchedArticlesURLs[$randomArticleURLIndex];
+        // Getting URI by random index and returning it
+        $random_uri = $searchedArticlesURLs[$randomArticleURLIndex];
+
+        // Forming full url
+        $url = $this->indexPageUrl.$random_uri;
+
+		return $url;
 	}
 
 	// Function that gets html from some web page by its URL
@@ -94,8 +100,8 @@ class SearchArticle {
 	public function handleArticleHTMLAndReturnContent($html) {
 		// phpQuery library
 		phpQuery::newDocument($html);
-			$articleHeader = pq('h1 span')->text(); // getting header of article
-			$articleContent = pq('.post-content')->html(); // getting content of article
+			$articleHeader = pq('.Title h1')->text(); // getting header of article
+			$articleContent = pq('.article')->html(); // getting content of article
 		phpQuery::unloadDocuments();
 
 		// Put all the data into array
