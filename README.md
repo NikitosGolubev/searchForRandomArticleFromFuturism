@@ -2,17 +2,17 @@
 This is a project that was created with a purpose to understand how to make simple requests via Guzzle Http library and just to strengthen that skill.
 
 # What it does?
-Basicly, everything what it does is just search for articles on site - futurism.com, by key words that user put into input, and then gets random article from the list of latest articles which fits the search query and prints it.
+Basically, everything that it does is just searches for articles on site - futurism.com, by keywords that user put into the input,  then gets a random article from the list of latest articles which fits the search query and finally prints it.
 
 # Front-end
--)There were no design, so I styled all elements on flow.
+- There was no design, so I styled all elements on flow.
 
--)At the time of creation, I had not learnt NPM, GULP, BEM, SASS yet, so this things aren't applied.
+- At the time of creation, I had not learned NPM, GULP, BEM, SASS yet, so these things aren't applied.
 
--)Javascript ensures good validation on flow of basic issues that can happen, to make searching more convinient.
+- Javascript ensures good validation on the flow of basic issues that can happen, to make searching more convenient.
 
 # My memories about this work
-Well, this brief work was very important for me at that time. I've been learning principles of of Guzzle 6(its "quickstart" section of documentation) for several days and I really became bored to simply consume theory. I realised, that I have to do some kind of brake, and the best solution that I found - is to do a little project which will let me feel more confident that my learning process is not pointless. Another words, I needed to regenerate my inspirational and motivational resourses to sustain further learning. And, I've done it! I've taken a good breath of fresh air that charged me with a lot of energy and further I easily completed learning Guzzle 6. I understood this library well, and I suppose, without this lever, I would have been struggling a lot with myself to achieve same results.
+Well, this brief work was very important to me at that time. I've been learning principles of Guzzle 6(its "quickstart" section of documentation) for several days and I really became bored to simply consume theory. I realized, that I have to do some kind of break, and the best solution that I found - is to build a little project which will let me feel more confident that my learning process is not pointless. Other words, I needed to regenerate my inspirational and motivational resources to sustain further learning. And, I've done it! I've taken a good breath of fresh air that charged me with a lot of energy and further I easily completed learning Guzzle 6. I understood this library well, and I suppose, without this lever, I would have been struggling a lot with myself to achieve the same results.
 
 # searchForRandomArticleFromFuturism - RU
 Данный проект создан с целью понять и закрепить знания о создании запросов с помощью библиотеки Guzzle Http.
