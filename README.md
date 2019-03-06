@@ -1,6 +1,15 @@
 # searchForRandomArticleFromFuturism - ENG
 This is a project that was created with a purpose to understand how to make simple requests via Guzzle Http library and just to strengthen that skill.
 
+### Main page:
+![main page](https://raw.githubusercontent.com/NikitosGolubev/images/master/futurismIndex.png)
+
+### Found article:
+![found article](https://raw.githubusercontent.com/NikitosGolubev/images/master/futurismArticle.png)
+
+### Not found message:
+![not found message](https://raw.githubusercontent.com/NikitosGolubev/images/master/futurismNotFound.png)
+
 # What it does?
 Basically, everything that it does is just searches for articles on site - futurism.com, by keywords that user put into the input,  then gets a random article from the list of latest articles which fits the search query and finally prints it.
 
